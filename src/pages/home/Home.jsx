@@ -32,9 +32,9 @@ const Home = ({type}) => {
     <div className="home">
       <Navbar />
       <Featured type={type}/>
-      <List/>
-      <List/>
-      <List/>
+      {lists.map((list) => (
+        <List list={list} />
+      ))}
     </div>
   );
 };
